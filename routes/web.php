@@ -11,10 +11,8 @@
 |
 */
 
+Route::get('/', 'PageController@sampleGet');
+Route::post('/', 'PageController@samplePost');
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/aaa', 'PageController@sample');
+Route::get('/login', 'PageController@loginGet');
+Route::get('/create', 'PageController@createGet');

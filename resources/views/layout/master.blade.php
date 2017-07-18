@@ -4,16 +4,16 @@
 @include('layout.drawer')
 <div class="header">
     <header class="ui header centered">
-        <h1 class="white text">Sample Page</h1>
+        <h1 class="white text">{{$title}}</h1>
         <p class="gray text">
-            Welcome to Sample Page!
+            This is {{$title}}.
         </p>
     </header>
 </div>
 
 <body>
     {{-- body部 --}}
-    @section('body')
+    @section('content')
     @show
     <div>
         @include('layout.masterFooter')
