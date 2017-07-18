@@ -1,0 +1,16 @@
+div.header {
+    background-color: rgb(44, 62, 80);
+    margin-bottom: 10px;
+}
+
+.white.text {
+    color: rgb(255, 255, 255);
+}
+
+.gray.text {
+    color: rgb(200, 200, 200);
+}
+
+.footer {
+    background-color: rgb(219, 219, 219);
+}
