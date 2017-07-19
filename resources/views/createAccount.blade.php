@@ -3,14 +3,19 @@
     <div class="CreateAccountForm">
         <div class="form-wrapper">
             <h1 class="loginTitle">Create Account</h1>
-            <form method='post' action='./'>
+            <form method='post' action='create'>
                 <div class="form-item">
-                    <label for="username"></label>
-                    <input type="text" name="username" required="required" placeholder="User Name"></input>
+                    <label for="learnername"></label>
+                    <input type="text" name="learnername" required="required" placeholder="Name"></input>
                 </div>
                 <div class="form-item">
-                    <label for="email"></label>
-                    <input type="email" name="email" required  placeholder="Email Address"></input>
+                    <label for="learnerID"></label>
+                    <input type="text" name="learnerid" required  placeholder="ID" minlength="6"></input>
+                    @if (isset($message_dupl))
+                        <p class="errorMes">
+                            {{$message_dupl}}
+                        </p>
+                    @endif
                 </div>
                 <div class="form-item">
                     <label for="password"></label>

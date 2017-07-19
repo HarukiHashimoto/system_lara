@@ -3,14 +3,24 @@
     <div class="loginForm">
         <div class="form-wrapper">
             <h1 class="loginTitle">Log in</h1>
-            <form method='post' action='./'>
+            <form method='post' action='login'>
                 <div class="form-item">
-                    <label for="username"></label>
-                    <input type="text" name="username" required="required" placeholder="User Name"></input>
+                    <label for="learnerid"></label>
+                    <input type="text" name="learnerid" required="required" placeholder="ID"></input>
+                    @if (isset($message_notExist))
+                        <p class="errorMes">
+                            {{$message_notExist}}
+                        </p>
+                    @endif
                 </div>
                 <div class="form-item">
                     <label for="password"></label>
                     <input type="password" name="password" required minlength="8" placeholder="Password"></input>
+                    @if (isset($message_pswDeny))
+                        <p class="errorMes">
+                            {{$message_pswDeny}}
+                        </p>
+                    @endif
                 </div>
                 <div class="button-panel">
                     <input type="submit" class="button" title="Log in" value="Log in"></input>

@@ -10,6 +10,10 @@ div.header {
     color: rgb(200, 200, 200);
 }
 
+.centered {
+    text-align: center;
+}
+
 .footer {
     background-color: rgb(219, 219, 219);
 }
@@ -97,3 +101,7 @@ form {
   border-bottom: 1px dotted #8c8c8c;
 }
 /********** ログイン機構ここまで **********/
+
+.errorMes {
+    color: rgb(212, 89, 89);
+}

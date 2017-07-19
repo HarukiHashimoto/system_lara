@@ -15,4 +15,6 @@ Route::get('/', 'PageController@sampleGet');
 Route::post('/', 'PageController@samplePost');
 
 Route::get('/login', 'PageController@loginGet');
+Route::post('/login', 'PageController@loginPost');
 Route::get('/create', 'PageController@createGet');
+Route::post('/create', 'PageController@createPost');
