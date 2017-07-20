@@ -9,30 +9,30 @@ use Session;
 use Redirect;
 use Input;
 use Hash;
+use Cookie;
 
 class PageController extends Controller
 {
     public function sampleGet() {
-        $title = 'Sample Page';
-        $learner = DB::select("select name from learner");
+        $title = 'Sample Page';;
 
-        return view('sample', compact('title', 'learner'));
+        return view('sample', compact('title'));
     }
 
     public function samplePost() {
-        $title = 'Sample Page';
-        $learner = DB::select("select name from learner");
+        $title = 'Sample Page';;
 
-        return view('sample', compact('title', 'learner'));
+        return view('sample', compact('title'));
     }
 
     public function loginGet() {
         $title = 'Login Page';
-        $learner = DB::select("select name from learner");
-        if (Session::has('userid')) {
-            return view('');    // ログインしている場合
+
+        if (!Session::has('learnerid')) {
+            echo 'ログイン済み';
+            return view('login', compact('title'));
         } else {
-            return view('login', compact('title', 'learner'));
+            return view('login', compact('title'));
         }
     }
 
@@ -44,7 +44,9 @@ class PageController extends Controller
         $count_data = count($data);
         if ($count_data == 1) {
             if (Hash::check($password, $data[0]->password)) {
-                echo 'Hash Mach!';
+                Session::put('learnerid', $learnerid);
+                $session_id = Session::get('learnerid');
+                $cookie = Cookie::make('cookie_id', $session_id, 60*24*3);
             } else {
                 $message_pswDeny='Error:パスワードが一致しません．';
                 return view('login', compact('title', 'message_pswDeny'));
@@ -53,11 +55,11 @@ class PageController extends Controller
             $message_notExist='Error:IDに該当するユーザが存在しません．';
             return view('login', compact('title', 'message_notExist'));
         }
-        $learner = DB::select("select * from learner");
+
         if (Session::has('userid')) {
             return view('');    // ログインしている場合
         } else {
-            return view('login', compact('title', 'learner'));
+            return view('login', compact('title', 'session_id'))->withcookie($cookie);
         }
     }
 

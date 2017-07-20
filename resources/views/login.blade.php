@@ -33,4 +33,10 @@
             </div>
         </div>
     </div>
+    @if (isset($session_id))
+        <p>
+            {{$session_id}}
+        </p>
+    @endif
+
 @endsection
