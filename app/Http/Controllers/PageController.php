@@ -31,6 +31,8 @@ class PageController extends Controller
         if (!Session::has('learnerid')) {
             return view('login', compact('title'));
         } else {
+            $test = Session::all();
+            print_r($test);
             echo 'ログイン済み';
             return view('login', compact('title'));
         }

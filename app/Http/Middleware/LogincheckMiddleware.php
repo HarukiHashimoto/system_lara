@@ -17,10 +17,13 @@ class LogincheckMiddleware
      */
     public function handle($request, Closure $next)
     {
-        echo "in midlleware";
-        $test = Session::all();
-        print_r($test);
+
         $res = $next($request);
+        // echo "in midlleware";
+        // $test = Session::all();
+        // print_r($test);
+        // echo '<br />';
+        // return redirect('create');
         return $res;
     }
 }
