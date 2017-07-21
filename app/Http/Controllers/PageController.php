@@ -29,9 +29,9 @@ class PageController extends Controller
         $title = 'Login Page';
 
         if (!Session::has('learnerid')) {
-            echo 'ログイン済み';
             return view('login', compact('title'));
         } else {
+            echo 'ログイン済み';
             return view('login', compact('title'));
         }
     }

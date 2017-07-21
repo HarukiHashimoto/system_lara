@@ -18,8 +18,8 @@ class LogincheckMiddleware
     public function handle($request, Closure $next)
     {
         echo "in midlleware";
-        $test = Request::input('session_id');
-        echo $test;
+        $test = Session::all();
+        print_r($test);
         $res = $next($request);
         return $res;
     }
