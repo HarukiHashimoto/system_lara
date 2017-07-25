@@ -24,7 +24,7 @@
                 <div class="button-panel">
                     <input type="submit" class="button" title="Create Account" value="Create Account"></input>
                 </div>
-                <input type="hidden"  name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </form>
             <div class="form-footer">
                 <p><a href="#">Need Help?</a></p>

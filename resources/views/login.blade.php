@@ -6,7 +6,7 @@
             <form method='post' action='login'>
                 <div class="form-item">
                     <label for="learnerid"></label>
-                    <input type="text" name="learnerid" required="required" placeholder="ID"></input>
+                    <input type="text" name="learnerid" required="required" placeholder="ID" minlength="6"></input>
                     @if (isset($message_notExist))
                         <p class="errorMes">
                             {{$message_notExist}}
@@ -22,10 +22,10 @@
                         </p>
                     @endif
                 </div>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="button-panel">
                     <input type="submit" class="button" title="Log in" value="Log in"></input>
                 </div>
-                <input type="hidden"  name="_token" value="{{ csrf_token() }}">
             </form>
             <div class="form-footer">
                 <p><a href="create">Create an account</a></p>

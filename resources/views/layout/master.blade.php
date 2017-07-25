@@ -10,7 +10,7 @@
         </p>
     </header>
 </div>
-
+@include('layout.loginBar')
 <body>
     {{-- body部 --}}
     @section('content')
