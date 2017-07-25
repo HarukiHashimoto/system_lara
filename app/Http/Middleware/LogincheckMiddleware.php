@@ -19,11 +19,12 @@ class LogincheckMiddleware
     {
 
         $res = $next($request);
-        // echo "in midlleware";
-        // $test = Session::all();
-        // print_r($test);
-        // echo '<br />';
-        // return redirect('create');
-        return $res;
+        echo "in midlleware";
+        echo '<br />';
+        if (Session::has('learnerid')) {
+            return $res;
+        } else {
+            return view('login', compact('res'));
+        }
     }
 }
