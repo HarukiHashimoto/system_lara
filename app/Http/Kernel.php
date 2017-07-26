@@ -18,7 +18,10 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+<<<<<<< HEAD
         \App\Http\Middleware\LogincheckMiddleware::class,
+=======
+>>>>>>> 664b1d610aa3fe757376eaa60735eaac4475a5a3
     ];
 
     /**
@@ -57,5 +60,6 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'loginCheck' => \App\Http\Middleware\LogincheckMiddleware::class,
     ];
 }
