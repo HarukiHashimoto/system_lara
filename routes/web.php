@@ -21,3 +21,5 @@ Route::post('/create', 'PageController@createPost');
 Route::post('/logout', 'PageController@logoutPost');
 
 Route::get('/system', 'SystemController@systemGet');
+
+Route::any('/systemsend', 'SystemController@exchange');
