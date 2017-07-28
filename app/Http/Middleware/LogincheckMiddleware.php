@@ -20,14 +20,13 @@ class LogincheckMiddleware
     public function handle($request, Closure $next)
     {
         $res = $next($request);
-<<<<<<< HEAD
         echo "in midlleware";
         echo '<br />';
         if (Session::has('learnerid')) {
             return $res;
         } else {
             return view('login', compact('res'));
-=======
+        }
         // $test = Session::all();
         // print_r($test);
         $cookie_id = Cookie::get('cookie_id', 'NULL'); //セッションが開始されていなければ0000がセットされる
@@ -44,7 +43,6 @@ class LogincheckMiddleware
             Cookie::queue($cookie);
             $request->merge(['cookie_id'=>$cookie_id]);
             return $res;
->>>>>>> 664b1d610aa3fe757376eaa60735eaac4475a5a3
         }
     }
 }

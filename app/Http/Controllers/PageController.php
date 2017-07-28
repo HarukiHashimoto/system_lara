@@ -22,7 +22,7 @@ class PageController extends Controller
 
     public function sampleGet() {
         $title = 'Sample Page';
-        $cookie_id = Cookie::get('cookie_id');
+        $cookie_id = Cookie::get('cookie_id', 'NULL');
 
         return view('sample', compact('title', 'cookie_id'));
     }
