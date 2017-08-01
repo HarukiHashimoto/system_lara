@@ -32,15 +32,16 @@ class SystemController extends Controller
 
     public function exchange() {
         $lm_list = DB::select('select * from learning_material');
-        for ($i=0; $i < count($lm_list); $i++) {
-            $lm_title[$i] = $lm_list[$i]->title;
-            $lm_text[$i] = $lm_list[$i]->material_text;
-            $lm_id[$i] = $lm_list[$i]->material_id;
-        }
+        // for ($i=0; $i < count($lm_list); $i++) {
+        //     $lm_title[$i] = $lm_list[$i]->title;
+        //     $lm_text[$i] = $lm_list[$i]->material_text;
+        //     $lm_id[$i] = $lm_list[$i]->material_id;
+        // }
 
-        $lm_title = json_safe_encode($lm_title);
-        $lm_id = json_safe_encode($lm_id);
-        return response($lm_id);
+        // DBから取得したデータをJSONデータ化
+        $lm_list = json_safe_encode($lm_list);
+
+        return response($lm_list);
     }
 }
 

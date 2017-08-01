@@ -2,7 +2,7 @@
 <html>
 @include('layout.masterHead')
 @include('layout.drawer')
-<div class="header">
+<div class="header main">
     <header class="ui header centered">
         <h1 class="white text">{{$title}}</h1>
         <p class="gray text">
