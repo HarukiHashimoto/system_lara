@@ -28,13 +28,7 @@ $(function() {
        $("#errorThrown").html("errorThrown : " + errorThrown);
     });
 
-<<<<<<< HEAD
-    $('#read').click(function() {
-        
-    })
 
-=======
->>>>>>> 19e6999129135df54dd8d3819e1787b1190cc746
     return false;
 
 
