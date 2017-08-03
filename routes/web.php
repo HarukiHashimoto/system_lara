@@ -22,4 +22,7 @@ Route::post('/logout', 'PageController@logoutPost');
 
 Route::get('/system', 'SystemController@systemGet');
 
-Route::any('/systemsend', 'SystemController@exchange');
+Route::get('/read', 'SystemController@readAll');
+Route::POST('/read/{lm_id}', 'SystemController@readAirticle');
+
+Route::resource('main', 'MainController');

@@ -30,7 +30,7 @@ class SystemController extends Controller
         return view('system', compact('title', 'cookie_id'));
     }
 
-    public function exchange() {
+    public function readAll() {
         $lm_list = DB::select('select * from learning_material');
         // for ($i=0; $i < count($lm_list); $i++) {
         //     $lm_title[$i] = $lm_list[$i]->title;
@@ -42,6 +42,13 @@ class SystemController extends Controller
         $lm_list = json_safe_encode($lm_list);
 
         return response($lm_list);
+    }
+
+    public function readAirticle() {
+        $title = 'Read';
+        echo $lm_id;
+        $cookie_id = Cookie::get('cookie_id', 'NULL');
+        return view('system', compact('title', 'cookie_id'));
     }
 }
 
