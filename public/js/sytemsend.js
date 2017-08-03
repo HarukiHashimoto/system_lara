@@ -15,5 +15,10 @@ $(function() {
       $("#textStatus").html("textStatus : " + textStatus);
       $("#errorThrown").html("errorThrown : " + errorThrown);
     });
+
+    $('#read').click(function() {
+        
+    })
+
     return false;
 });
