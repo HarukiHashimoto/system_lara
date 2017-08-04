@@ -87,12 +87,17 @@ class PageController extends Controller
     // アカウント作成画面からのPOSTを受け取ったとき
     public function createPost() {
         $title = 'Create Account Page';
+        $cookie_id = Cookie::get('cookie_id', 'NULL');
         $learnername = Request::input('learnername');
         $learnerid = Request::input('learnerid');
         $password = Request::input('password');
+        $confirm = Request::input('confirm');
+        if ($password != $confirm) {
+            $message_notMatch = "パスワードが一致しませんでした．";
+            return view('createAccount', compact('title', 'message_notMatch', 'cookie_id'));
+        }
         $data = DB::select('select * from learner where learner_id = ?',[$learnerid]);
         $count_data = count($data);
-        $cookie_id = Cookie::get('cookie_id', 'NULL');
         if ($count_data == 0) {
             $pass_hashed = Hash::make($password);
             DB::insert('insert into learner (learner_id, password, name) values (?, ?, ?)',[$learnerid, $pass_hashed, $learnername]);

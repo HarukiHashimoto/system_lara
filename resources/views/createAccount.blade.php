@@ -21,6 +21,15 @@
                     <label for="password"></label>
                     <input type="password" name="password" required minlength="8" placeholder="Password"></input>
                 </div>
+                <div class="form-item">
+                    <label for="confirm"></label>
+                    <input type="password" name="confirm" required minlength="8" placeholder="Confirm Password"></input>
+                </div>
+                @if (isset($message_notMatch))
+                    <p class="errorMes">
+                        {{$message_notMatch}}
+                    </p>
+                @endif
                 <div class="button-panel">
                     <input type="submit" class="button" title="Create Account" value="Create Account"></input>
                 </div>
