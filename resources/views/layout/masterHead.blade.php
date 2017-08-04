@@ -8,6 +8,7 @@
     <link href='https://cdnjs.cloudflare.com/ajax/libs/mermaid/0.5.8/mermaid.css' rel='stylesheet' type="text/css"  />
     <link href="/system_lara/public/css/Semantic-UI-CSS/semantic.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/css/drawer.min.css" type="text/css">
+    <link href="/system_lara/public/css/Flat-UI-master/dist/css/flat-ui.min.css" rel="stylesheet" type="text/css" />
     <link href="/system_lara/public/css/style.css" rel="stylesheet" type="text/css" />
 
     <title>{{$title}}</title>

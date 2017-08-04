@@ -5,4 +5,7 @@
             ログアウトしました．
         </p>
     </div>
+    <br />
+    <br />
+    <br />
 @endsection

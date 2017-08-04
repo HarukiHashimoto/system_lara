@@ -1,10 +1,12 @@
 @extends('layout.master')
 @section('content')
-    <form method="get" action="" name="mainForm">
+
         <div>
             <br />
+            <form method="get" action="" name="mainForm">
             <div id="lm_title">
             </div>
+            </form>
             <p class='centered'>
             </p>
             {{-- @for ($i=0; $i < count($lm_title); $i++)
@@ -15,5 +17,5 @@
             <br />
             <br />
         </div>
-    </form>
+
 @endsection

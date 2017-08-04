@@ -110,7 +110,7 @@ class PageController extends Controller
     }
 
     public function logoutPost() {
-        $title = 'Logout';
+        $title = 'Logout Page';
         Cookie::queue(Cookie::forget('cookie_id'));
         Session::flush();
         $cookie_id = "NULL";

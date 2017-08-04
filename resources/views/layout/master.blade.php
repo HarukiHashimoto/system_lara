@@ -12,8 +12,9 @@
 </div>
 @include('layout.loginBar')
 <body>
-    {{-- body部 --}}
-    @section('content')
-    @show
-    <div>
+    <div class='mainPart'>
+        {{-- body部 --}}
+        @section('content')
+        @show
         @include('layout.masterFooter')
+    </div>

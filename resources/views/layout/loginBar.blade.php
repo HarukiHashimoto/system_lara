@@ -5,13 +5,19 @@
 
         @if ($cookie_id != 'NULL')
             <form method='post' action='logout'>
-                {{$cookie_id}}さんとしてログイン中
+
+                <div class="ui label">
+                    <i class="user icon"></i>
+                    {{$cookie_id}}
+                    <a class="detail" href="/system_lara/public/logout">Logout</a>
+                </div>
+{{--            {{$cookie_id}}さんとしてログイン中
                 <button class="ui compact labeled icon button">
                     <i class="icon sign out"></i>
                     Logout
                 </button>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-            </form>
+            </form> --}}
         @else
             <a href="login">
                 <button class="ui compact labeled icon button">
