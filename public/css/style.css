@@ -145,3 +145,8 @@ form {
     background: #e4fcff;/*背景色*/
     border-top: solid 6px #1dc1d6;
 }
+
+.add {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+}

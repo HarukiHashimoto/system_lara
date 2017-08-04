@@ -23,18 +23,21 @@
         <div class="ten wide column">
             <div class="ui grid">
                 <div class="row">
-                    <div class="six wide column">
+                    <div class="five wide column">
                         <div class="droparea centered drop1">原因</div>
                     </div>
-                    <div class="four wide column">
+                    <div class="three wide column">
 
                     </div>
-                    <div class="six wide column">
+                    <div class="five wide column">
                         <div class="droparea centered drop2">結果</div>
                     </div>
+                    <div class="three wide column">
+                        <div class="centered add">
+                            <a class="btn btn-block btn-primary">Add</a>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
         </div>
         <div class="three wide column"></div>
