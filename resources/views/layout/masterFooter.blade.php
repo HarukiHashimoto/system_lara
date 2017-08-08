@@ -7,6 +7,7 @@
 <script type="text/javascript" src="/system_lara/public/js/sytemsend.js"></script>
 <script type="text/javascript" src="/system_lara/public/js/setup.js"></script>
 <script type="text/javascript" src="/system_lara/public/js/dnd.js"></script>
+<script type="text/javascript" src="/system_lara/public/js/changeEffect.js"></script>
 
 {{-- ドロワー関連ココから↓ --}}
 {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> --}}

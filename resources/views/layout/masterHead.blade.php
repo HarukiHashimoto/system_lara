@@ -3,6 +3,8 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="icon" href="/system_lara/public/image/favicon/favicon.ico">
+
     {{-- cssの読込 --}}
     <link href="/system_lara/public/css/app.css" rel="stylesheet" type="text/css" />
     <link href='https://cdnjs.cloudflare.com/ajax/libs/mermaid/0.5.8/mermaid.css' rel='stylesheet' type="text/css"  />
