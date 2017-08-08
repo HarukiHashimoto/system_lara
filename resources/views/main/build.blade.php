@@ -40,7 +40,7 @@
                     </div>
                     <div class="three wide column">
                         <div class="centered add">
-                            <a class="btn btn-block btn-inverse">Add</a>
+                            <a class="btn btn-block btn-inverse" id="add_btn">Add</a>
                         </div>
                     </div>
                 </div>
@@ -48,6 +48,7 @@
         </div>
         <div class="three wide column"></div>
     </div>
+    <div id="mymodel"></div>
 </div>
 <br />
 <br />
