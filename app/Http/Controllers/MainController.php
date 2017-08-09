@@ -36,15 +36,20 @@ class MainController extends Controller
         $title = 'Main Page';
 
         // 選択されたテキストの取得
-        $data = DB::select("select material_text,title from learning_material where material_id = ?",[$lm_id]);
+        $data = DB::select("select * from learning_material where material_id = ?",[$lm_id]);
         $lm_text = $data[0]->material_text;
         $lm_title = $data[0]->title;
+        $lm_id = $data[0]->material_id;
+
+
 
         // テキスト内のノードの取得
         $node = DB::select("select * from node where material_id = ? or material_id = ?", ['general', $lm_id]);
         // $node = json_safe_encode($data);
 
+        $lm_id = json_safe_encode($lm_id);
         $cookie_id = Cookie::get('cookie_id', 'NULL');
-        return view('main', compact('title', 'cookie_id', 'lm_text', 'lm_title', 'node'));
+        $lr_id = json_safe_encode($cookie_id);
+        return view('main', compact('title', 'cookie_id', 'lm_text', 'lm_title', 'lm_id', 'lr_id', 'node'));
     }
 }

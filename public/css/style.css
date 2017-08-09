@@ -169,3 +169,8 @@ td.img {
     text-align: center;
     vertical-align: middle;
 }
+
+div.modelArea {
+    height: 500px;
+    border: #5c5c5c solid 1px;
+}

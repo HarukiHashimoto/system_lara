@@ -48,7 +48,15 @@
         </div>
         <div class="three wide column"></div>
     </div>
-    <div id="mymodel"></div>
+    <div class="row">
+        <div class="three wide column">
+        </div>
+        <div class="ten wide column">
+            <div id="mymodel" class="modelArea"></div>
+        </div>
+        <div class="three wide column">
+        </div>
+    </div>
 </div>
 <br />
 <br />

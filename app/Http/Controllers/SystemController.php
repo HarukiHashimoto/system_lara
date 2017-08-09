@@ -50,7 +50,15 @@ class SystemController extends Controller
         $cookie_id = Cookie::get('cookie_id', 'NULL');
         return view('system', compact('title', 'cookie_id'));
     }
+
+    public function nodenlist($lr_id, $lm_id) {
+        $node_list = DB::select('select * from node where material_id = ? or material_id = ?', [$lm_id, 'general']);
+        $link_list = DB::select('select * from learner_rule where material_id = ? or learner_id = ?', [$lm_id, $lr_id]);
+        $response = array();
+        $response['node_list'] = $node_list;
+        $response['link_list'] = $link_list;
+        // $node_list = json_safe_encode($node_list);
+        $response = json_safe_encode($response);
+        return response($response);
+    }
 }
-
-
-// 'lm_title', 'lm_text', 'lm_id'

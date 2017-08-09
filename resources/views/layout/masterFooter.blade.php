@@ -9,6 +9,7 @@
 <script type="text/javascript" src="/system_lara/public/js/changeEffect.js"></script>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mermaid/0.5.8/mermaid.js'></script>
 <script type='text/javascript' src='/system_lara/public/js/vis.js/dist/vis.min.js'></script>
+<script type='text/javascript' src='/system_lara/public/js/CreateModel.js' data-lmId = {{$lm_id}} data-lrId = {{$lr_id}} id="createModel"></script>
 
 
 {{-- ドロワー関連ココから↓ --}}
