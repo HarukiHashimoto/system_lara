@@ -53,7 +53,7 @@ class SystemController extends Controller
 
     public function nodenlist($lr_id, $lm_id) {
         $node_list = DB::select('select * from node where material_id = ? or material_id = ?', [$lm_id, 'general']);
-        $link_list = DB::select('select * from learner_rule where material_id = ? or learner_id = ?', [$lm_id, $lr_id]);
+        $link_list = DB::select('select * from link where material_id = ? or learner_id = ?', [$lm_id, $lr_id]);
         $response = array();
         $response['node_list'] = $node_list;
         $response['link_list'] = $link_list;
