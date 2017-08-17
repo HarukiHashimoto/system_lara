@@ -12,6 +12,7 @@ use Hash;
 use Cookie;
 use Response;
 
+
 // オブジェクトをJSON形式へ変換する（日本語をunicodeのままで整形して．）
 function json_safe_encode($data){
     return json_encode($data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
