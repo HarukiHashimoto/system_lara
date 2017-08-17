@@ -13,6 +13,7 @@
     <link href="/system_lara/public/css/style.css" rel="stylesheet" type="text/css" />
     <link href='https://cdnjs.cloudflare.com/ajax/libs/mermaid/0.5.8/mermaid.css' rel='stylesheet' type="text/css"  />
     <link href='/system_lara/public/js/vis.js/dist/vis.min.css' rel='stylesheet' type="text/css"  />
+    <link href='/system_lara/public/js/vis.js/dist/vis-network.min.css' rel='stylesheet' type="text/css"  />
 
     <title>{{$title}}</title>
 </head>
