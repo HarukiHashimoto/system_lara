@@ -49,14 +49,93 @@
         <div class="three wide column"></div>
     </div>
     <div class="row">
-        <div class="three wide column">
+        <div class="one wide column">
         </div>
         <div class="ten wide column">
+            <div id="node-popUp">
+              <span id="node-operation">node</span> <br>
+              <table style="margin:auto;">
+                <tr>
+                  <td>id</td><td><input id="node-id" value="new value" /></td>
+                </tr>
+                <tr>
+                  <td>label</td><td><input id="node-label" value="new value" /></td>
+                </tr>
+              </table>
+              <input type="button" value="save" id="node-saveButton" />
+              <input type="button" value="cancel" id="node-cancelButton" />
+            </div>
+
+            <div id="edge-popUp">
+                <span id="edge-operation">edge</span> <br>
+                <table style="margin:auto;">
+                    <tr>
+                        {{-- <td>P or N</td> --}}
+                        {{-- <td><input id="edge-label" value="new value" /></td> --}}
+                        <td><p>
+                        <input type="radio" name="pon" value="1"> Posi
+                        <input type="radio" name="pon" value="2"> Nega
+                        </p></td>
+                    </tr>
+                </table>
+              <input type="button" value="save" id="edge-saveButton" />
+              <input type="button" value="cancel" id="edge-cancelButton" />
+            </div>
             <div id="mymodel" class="modelArea"></div>
         </div>
-        <div class="three wide column">
+        <div class="four wide column">
+            <h5>問い</h5>
+            <div class="genq">
+                <a href="#" class="ui button primary" id="genq_btn">問いノード生成</a>
+            </div>
+            <div class="question_list">
+                <table>
+                    <tr>
+                        <td class="question_table">
+                            <p><input type="radio" name="question" value="長期的に影響を考えると結果は変わりますか？" id='q1'> 長期的に影響を考えると結果は変わりますか？</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="question_table">
+                            <p><input type="radio" name="question" value="社会システムを良くすることを考えたとき結論はどうなりますか？" id='q2'> 社会システムを良くすることを考えたとき結論はどうなりますか？</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="question_table">
+                            <p><input type="radio" name="question" value="1" id='q3'> 社会システムを良くすることを考えたとき結論はどうなりますか？</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="question_table">
+                            <p><input type="radio" name="question" value="1" id='q4'> 社会システムを良くすることを考えたとき結論はどうなりますか？</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="add_question">
+                <div class="ui fluid action input">
+                  <input type="text" placeholder="New Question...">
+                  <a href="#" class="ui button default">Add</a>
+                </div>
+            </div>
+
+
         </div>
+        <div class="one wide column">
+        </div>
+
     </div>
+    {{-- <div class="row">
+        <div class="two wide column">
+        </div>
+        <div class="twelve wide column">
+        </div>
+        <div class="two wide column">
+        </div>
+    </div> --}}
 </div>
-<br />
-<br />
+<br>
+<br>
+<br>
+<br>
+<br>
