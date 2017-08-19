@@ -75,6 +75,8 @@
                         <td><p>
                         <input type="radio" name="pon" value="1"> Posi
                         <input type="radio" name="pon" value="2"> Nega
+                        <input type="radio" name="pon" value="3"> 結論
+
                         </p></td>
                     </tr>
                 </table>
@@ -102,12 +104,12 @@
                     </tr>
                     <tr>
                         <td class="question_table">
-                            <p><input type="radio" name="question" value="1" id='q3'> 社会システムを良くすることを考えたとき結論はどうなりますか？</p>
+                            <p><input type="radio" name="question" value="1" id='q3'> 暗黙になっている前提，仮定は無いだろうか？</p>
                         </td>
                     </tr>
                     <tr>
                         <td class="question_table">
-                            <p><input type="radio" name="question" value="1" id='q4'> 社会システムを良くすることを考えたとき結論はどうなりますか？</p>
+                            <p><input type="radio" name="question" value="1" id='q4'> 結果は一般的に成り立つものだろうか？</p>
                         </td>
                     </tr>
                 </table>
