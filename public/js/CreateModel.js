@@ -132,8 +132,10 @@ $.ajax({
           if (label[i].checked) {
               if(label[i].value == 1) {
                   data.color = {color:'blue'};
-              } else {
+              } else if(label[i].value == 2) {
                   data.color = {color:'red'};
+              } else {
+                  data.color = {color:'#747474'};
               }
           }
       }
@@ -163,8 +165,10 @@ $.ajax({
           if (label[i].checked) {
               if(label[i].value == 1) {
                   data.color = {color:'blue'};
-              } else {
+              } else if(label[i].value == 2) {
                   data.color = {color:'red'};
+              } else {
+                  data.color = {color:'#747474'};
               }
 
           }

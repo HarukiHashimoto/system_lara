@@ -171,7 +171,9 @@ td.img {
 }
 
 div.modelArea {
-    height: 600px;
+    height: 800px;
+    width: 90%;
+    margin: 50px;
     border: #5c5c5c solid 1px;
 }
 

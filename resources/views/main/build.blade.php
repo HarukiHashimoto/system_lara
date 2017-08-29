@@ -73,10 +73,9 @@
                         {{-- <td>P or N</td> --}}
                         {{-- <td><input id="edge-label" value="new value" /></td> --}}
                         <td><p>
-                        <input type="radio" name="pon" value="1"> Posi
-                        <input type="radio" name="pon" value="2"> Nega
-                        <input type="radio" name="pon" value="3"> 結論
-
+                        <input type="radio" name="pon" value="1" /> Posi
+                        <input type="radio" name="pon" value="2" /> Nega
+                        <input type="radio" name="pon" value="3" /> else
                         </p></td>
                     </tr>
                 </table>
