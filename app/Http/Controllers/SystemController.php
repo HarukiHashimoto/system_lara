@@ -62,4 +62,10 @@ class SystemController extends Controller
         $response = json_safe_encode($response);
         return response($response);
     }
+
+    public function sample() {
+        $title = 'Sample';
+        $cookie_id = Cookie::get('cookie_id', 'NULL');
+        return view('sample', compact('title', 'cookie_id'));
+    }
 }

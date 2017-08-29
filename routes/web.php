@@ -27,4 +27,6 @@ Route::POST('/read/{lm_id}', 'SystemController@readAirticle');
 
 Route::get('/get/nodenlist/{lr_id}/{lm_id}', 'SystemController@nodenlist');
 
+Route::get('/sample', 'SystemController@sample');
+
 Route::resource('main', 'MainController');

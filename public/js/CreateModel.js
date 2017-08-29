@@ -1,6 +1,11 @@
 var $script     = $('#createModel');
 var lmId       = JSON.parse($script.attr('data-lmId'));
 var lrId       = JSON.parse($script.attr('data-lrId'));
+function getUniqueStr(myStrong){
+ var strong = 1000;
+ if (myStrong) strong = myStrong;
+ return new Date().getTime().toString(16)  + Math.floor(strong*Math.random()).toString(16)
+}
 
 // データベースからノードとリンクを取得
 $.ajax({
@@ -181,7 +186,7 @@ $.ajax({
         for (var i = 0; i < question.length; i++) {
             if (question[i].checked) {
                 label = question[i].value;
-                id = question[i].id
+                id = getUniqueStr();
             }
         }
         nodes.add([
