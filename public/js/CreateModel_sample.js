@@ -76,7 +76,8 @@ var options = {
         arrows: 'to',
     },
     physics: {
-        enabled: false
+        enabled: false,
+        "timestep": 1,
     },
     groups: {
         'pre_node': {
@@ -264,6 +265,8 @@ function saveEdgeData(data, callback) {
   callback(data);
 }
 
+
+
 $('#genq_btn').on('click', genQnode);
 
 function genQnode() {
@@ -285,3 +288,13 @@ $('body').on('load', function init() {
   setDefaultLocale();
   draw();
 });
+
+network.on("click", function(params) {
+    console.log(params);
+    var nodeId = params.nodes[0];
+    var nodePosition = network.getPositions([nodeId]);
+    console.log(nodePosition[nodeId]);
+    nodes.add([
+        {id: id, label: label, color: 'rgb(245, 167, 255)'}
+    ]);
+})
