@@ -1,55 +1,62 @@
 // console.log(model.link_list[1].factor1);
 // create an array with nodes
+
+function getUniqueStr(myStrong){
+ var strong = 1000;
+ if (myStrong) strong = myStrong;
+ return new Date().getTime().toString(16)  + Math.floor(strong*Math.random()).toString(16)
+}
+
 var nodes = new vis.DataSet([
     {id: 0, label: '治安', group: 'pre_node'},
     {id: 1, label: '\n外国人', group: 'pre_node'},
     {id: 2, label: 'アクセス', group: 'pre_node'},
     {id: 3, label: '税収', group: 'pre_node'},
-    {id: 4, label: '雇用', group: 'pre_node'},
-    {id: 5, label: '所得税', group: 'pre_node'},
-    {id: 100, label: '\n人口減少', group: 'usr_node'},
-    {id: 101, label: '\n労働力不足', group: 'usr_node'},
-    {id: 102, label: '公共投資', group: 'usr_node'},
-    {id: 103, label: '移住者', group: 'usr_node'},
+    // {id: 4, label: '雇用', group: 'pre_node'},
+    // {id: 5, label: '所得税', group: 'pre_node'},
+    // {id: 100, label: '\n人口減少', group: 'usr_node'},
+    // {id: 101, label: '\n労働力不足', group: 'usr_node'},
+    // {id: 102, label: '公共投資', group: 'usr_node'},
+    // {id: 103, label: '移住者', group: 'usr_node'},
     {id: 1000, label: '\n\n共通話題・異文化理解\nのためにマンガミュー\nジアムを作る', group: 'state'},
     {id: 1001, label: '\n\n英語教育に重点的に\n予算を配分する', group: 'state'},
     {id: 1002, label: '\n\n景気を優先する', group: 'state'},
-    {id: 1003, label: '\n\nIRを誘致する', group: 'state'},
-    {id: 1004, label: '\n\n将来世代', group: 'state'},
-    {id: 1005, label: '\n\n英語でコミュニケー\nションが取れない', group: 'state'},
+    // {id: 1003, label: '\n\nIRを誘致する', group: 'state'},
+    // {id: 1004, label: '\n\n将来世代', group: 'state'},
+    // {id: 1005, label: '\n\n英語でコミュニケー\nションが取れない', group: 'state'},
     {id: 1100, label: '\n\n外国人にとって\n住みやすくするには？\n\n', group: 'instance'},
     {id: 1101, label: '\n\n日本人が外国人と\n共生するには？\n\n', group: 'instance'},
-    {id: 1102, label: '\n\n将来世代に還元できる\n政策は？\n\n', group: 'instance'},
-    {id: 1103, label: '\n\n「将来世代」に負担\nを強いることになるのでは？\n\n', group: 'instance'},
-    {id: 1104, label: '\n\n治安と景気のどちらを\n優先させますか？\n\n', group: 'instance'},
-    {id: 1105, label: '\n\n誰が支払うのですか？\n\n', group: 'instance'},
-    {id: 2000, label: '提案', group: 'tag_1'},
-    {id: 2001, label: '提案', group: 'tag_1'},
-    {id: 2002, label: '指針', group: 'tag_2'},
-    {id: 2003, label: '結論', group: 'tag_3'},
-    {id: 2004, label: '問題', group: 'tag_4'},
-    {id: 2005, label: '問題', group: 'tag_4'},
-    {id: 2006, label: '問題', group: 'tag_4'},
-    {id: 2007, label: '関与者', group: 'tag_5'},
-    {id: 2009, label: '関与者', group: 'tag_5'},
-    {id: 2008, label: '懸念', group: 'tag_6'},
-    {id: 2010, label: '問い', group: 'tag_7'},
-    {id: 2011, label: '問い', group: 'tag_7'},
-    {id: 2012, label: '問い', group: 'tag_7'},
-    {id: 2013, label: '問い', group: 'tag_7'},
-    {id: 2014, label: '問い', group: 'tag_7'},
-    {id: 2015, label: '問い', group: 'tag_7'},
-    {id: 2016, label: '答え', group: 'tag_8'},
-    {id: 2017, label: '答え', group: 'tag_8'},
-    {id: 2018, label: '答え', group: 'tag_8'},
-    {id: 2019, label: '答え', group: 'tag_8'},
-    {id: 2020, label: '答え', group: 'tag_8'},
-    {id: 3000, label: 'V-b', group: 'tag_q'},
-    {id: 3001, label: 'V-c', group: 'tag_q'},
-    {id: 3002, label: 'V-c', group: 'tag_q'},
-    {id: 3003, label: 'Ⅴ-c', group: 'tag_q'},
-    {id: 3004, label: 'Ⅶ-a', group: 'tag_q'},
-    {id: 3005, label: 'Ⅶ-b', group: 'tag_q'},
+    // {id: 1102, label: '\n\n将来世代に還元できる\n政策は？\n\n', group: 'instance'},
+    // {id: 1103, label: '\n\n「将来世代」に負担\nを強いることになるのでは？\n\n', group: 'instance'},
+    // {id: 1104, label: '\n\n治安と景気のどちらを\n優先させますか？\n\n', group: 'instance'},
+    // {id: 1105, label: '\n\n誰が支払うのですか？\n\n', group: 'instance'},
+    // {id: 2000, label: '提案', group: 'tag_1'},
+    // {id: 2001, label: '提案', group: 'tag_1'},
+    // {id: 2002, label: '指針', group: 'tag_2'},
+    // {id: 2003, label: '結論', group: 'tag_3'},
+    // {id: 2004, label: '問題', group: 'tag_4'},
+    // {id: 2005, label: '問題', group: 'tag_4'},
+    // {id: 2006, label: '問題', group: 'tag_4'},
+    // {id: 2007, label: '関与者', group: 'tag_5'},
+    // {id: 2009, label: '関与者', group: 'tag_5'},
+    // {id: 2008, label: '懸念', group: 'tag_6'},
+    // {id: 2010, label: '問い', group: 'tag_7'},
+    // {id: 2011, label: '問い', group: 'tag_7'},
+    // {id: 2012, label: '問い', group: 'tag_7'},
+    // {id: 2013, label: '問い', group: 'tag_7'},
+    // {id: 2014, label: '問い', group: 'tag_7'},
+    // {id: 2015, label: '問い', group: 'tag_7'},
+    // {id: 2016, label: '答え', group: 'tag_8'},
+    // {id: 2017, label: '答え', group: 'tag_8'},
+    // {id: 2018, label: '答え', group: 'tag_8'},
+    // {id: 2019, label: '答え', group: 'tag_8'},
+    // {id: 2020, label: '答え', group: 'tag_8'},
+    // {id: 3000, label: 'V-b', group: 'tag_q'},
+    // {id: 3001, label: 'V-c', group: 'tag_q'},
+    // {id: 3002, label: 'V-c', group: 'tag_q'},
+    // {id: 3003, label: 'Ⅴ-c', group: 'tag_q'},
+    // {id: 3004, label: 'Ⅶ-a', group: 'tag_q'},
+    // {id: 3005, label: 'Ⅶ-b', group: 'tag_q'},
 ]);
 
 
@@ -76,7 +83,7 @@ var options = {
         arrows: 'to',
     },
     physics: {
-        enabled: false,
+        // enabled: false,
         "timestep": 1,
     },
     groups: {
@@ -117,7 +124,7 @@ var options = {
         },
         'tag_2': {
             shape: 'box',
-            color: '#84D7B8'
+            color: '#bf85d7'
         },
         'tag_3': {
             shape: 'box',
@@ -265,25 +272,6 @@ function saveEdgeData(data, callback) {
   callback(data);
 }
 
-
-
-$('#genq_btn').on('click', genQnode);
-
-function genQnode() {
-    console.log(nodes);
-    var question = document.getElementsByName('question');
-    for (var i = 0; i < question.length; i++) {
-        if (question[i].checked) {
-            label = question[i].value;
-            id = getUniqueStr();
-        }
-    }
-    nodes.add([
-        {id: id, label: label, color: 'rgb(245, 167, 255)'}
-    ]);
-}
-
-
 $('body').on('load', function init() {
   setDefaultLocale();
   draw();
@@ -291,10 +279,50 @@ $('body').on('load', function init() {
 
 network.on("click", function(params) {
     console.log(params);
-    var nodeId = params.nodes[0];
-    var nodePosition = network.getPositions([nodeId]);
-    console.log(nodePosition[nodeId]);
+    nodeId = params.nodes[0];
+    console.log(nodeId);
+    nodePosition = network.getPositions([nodeId]);
+    console.log(nodePosition[nodeId].x);
+
+    $('.tag').on('click', function() {
+        console.log(nodeId);
+        console.log(this.textContent);
+        id = nodeId + this.value;
+        label = this.textContent;
+        group = this.value;
+        console.log(nodeId);
+        nodes.add([
+            {
+                id: id,
+                label: label,
+                group: group,
+                physics: true,
+                // x: nodePosition[nodeId].x,
+                // y: nodePosition[nodeId].y,
+            }
+        ]);
+        edges.add([
+            {
+                from: id,
+                to: nodeId,
+                physics: true,
+                arrows: {
+                    to: {
+                        type: 'circle',
+                        scaleFactor: 0.5,
+                    },
+                }
+            }
+        ]);
+    });
+});
+
+$('.q_list').on('click', genQnode);
+
+function genQnode() {
+    id = this.id +"-"+ getUniqueStr();
+    label = this.textContent;
     nodes.add([
-        {id: id, label: label, color: 'rgb(245, 167, 255)'}
+        {id: id, label: label, group: "instance"}
     ]);
-})
+}
